@@ -1,4 +1,4 @@
-/* See LICENSE file for copyright and license details.
+ /*See LICENSE file for copyright and license details.
  *
  * dynamic window manager is designed like any other X client as well. It is
  * driven through handling X events. In contrast to other X clients, a window
@@ -1455,6 +1455,10 @@ void
 run(void)
 {
 	XEvent ev;
+
+	Arg a = {.v = NULL};
+	xrdb(&a);
+
 	/* main event loop */
 	XSync(dpy, False);
 	while (running && !XNextEvent(dpy, &ev))
@@ -2240,7 +2244,6 @@ main(int argc, char *argv[])
 		die("dwm: cannot open display");
 	checkotherwm();
         XrmInitialize();
-        loadxrdb();
 	setup();
 #ifdef __OpenBSD__
 	if (pledge("stdio rpath proc exec", NULL) == -1)
