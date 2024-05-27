@@ -22,7 +22,7 @@ static char *colors[][3] = {
 
 /* tagging */
 //static const char *tags[] = { "", "", "3", "4", "", "", "7", "", "9"};
-static const char *tags[] = { "[I]", "[II]", "[III]", "[IV]","[V]", "", "", "", "", "", ""};
+static const char *tags[] = { "[I]", "[II]", "[III]", "[IV]","[V]", "browser", "socials"};
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -108,11 +108,11 @@ static Key keys[] = {
 	TAGKEYS(                        XK_4,                      3)
 	TAGKEYS(                        XK_5,                      4)
 	//TAGKEYS(                        XK_d,                      5)
-	TAGKEYS(                        XK_b,                      6)
-	TAGKEYS(                        XK_s,                      7)
-	TAGKEYS(                        XK_e,                      8)
+	TAGKEYS(                        XK_b,                      5)
+	TAGKEYS(                        XK_s,                      6)
+	//TAGKEYS(                        XK_e,                      7)
 	//TAGKEYS(                        XK_y,                      9)
-	TAGKEYS(                        XK_n,                      10)
+	//TAGKEYS(                        XK_n,                      9)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 };
 
